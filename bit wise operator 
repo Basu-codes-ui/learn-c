@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+    int m = 40, n = 80;
+    int AND_opr, OR_opr, XOR_opr, NOT_opr;
+
+    AND_opr = (m & n);
+    OR_opr  = (m | n);
+    XOR_opr = (m ^ n);
+    NOT_opr = (~m);
+
+    printf("AND_opr value = %d\n", AND_opr);
+    printf("OR_opr value = %d\n", OR_opr);
+    printf("XOR_opr value = %d\n", XOR_opr);
+    printf("NOT_opr value = %d\n", NOT_opr);
+
+    return 0;
+}
