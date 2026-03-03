@@ -10,7 +10,9 @@ int main()
     scanf("%c%c",&name&adress);
 
     
-    printf("name=%s\n");
-
+    printf("name=%c\n",name);
+    printf("Address=%c\n",address);
+    
+    getch();
     return 0;
 }
