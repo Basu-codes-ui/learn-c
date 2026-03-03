@@ -1,0 +1,16 @@
+write WAP which asks name and adress from user and displays it
+#include <stdio.h>
+#define PI 3.142
+
+int main()
+{
+    char name[15], Address [100];
+
+    printf("Enter name and adress of the user\n");
+    scanf("%c%c",&name&adress);
+
+    
+    printf("name=%s\n");
+
+    return 0;
+}
