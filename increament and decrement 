@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+    int x, y, i;
+
+    i = 10;
+
+    x = i++;   // post-increment
+    y = ++i;   // pre-increment
+
+    printf("x = %d\n", x);
+    printf("y = %d\n", y);
+
+    return 0;
+}
