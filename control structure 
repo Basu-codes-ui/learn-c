@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int x, y, z;
+
+    printf("Enter 3 numbers:\n");
+    scanf("%d %d %d", &x, &y, &z);
+
+    if (x > y)
+    {
+        if (x > z)
+            printf("x is bigger\n");
+        else
+            printf("z is bigger\n");
+    }
+    else
+    {
+        if (y > z)
+            printf("y is bigger\n");
+        else
+            printf("z is bigger\n");
+    }
+    getch();
+    return (0);
+}
+
+    return 0;
+}
