@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main()
+{
+    char ch;
+
+    printf("Enter your choice (R, Y, G): ");
+    scanf("%c", &ch);
+
+    switch(ch)
+    {
+        case 'R':
+            printf("RED Light - Please STOP\n");
+            break;
+
+        case 'Y':
+            printf("YELLOW Light - Please WAIT\n");
+            break;
+
+        case 'G':
+            printf("GREEN Light - Please GO\n");
+            break;
+
+        default:
+            printf("There is no signal\n");
+    }
+    getch();
+
+    return 0;
+}
