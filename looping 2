@@ -1,0 +1,30 @@
+hostel boy/girl engineering a hostel after showing id card or acknowledgement 
+
+#include <stdio.h>
+
+int main()
+{
+    int i, id, ack;
+
+    for(i=1; i<=100; i++)
+    {
+        printf("Student %d\n", i);
+
+        printf("Has ID card? (1=yes 0=no): ");
+        scanf("%d",&id);
+
+        printf("Has acknowledgement? (1=yes 0=no): ");
+        scanf("%d",&ack);
+
+        if(id==1 || ack==1)
+        {
+            printf("He is a hostel student\n");
+        }
+        else
+        {
+            printf("He is not a hostel student\n");
+        }
+    }
+
+    return 0;
+}
