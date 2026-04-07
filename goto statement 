@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+    int total_marks;
+
+    printf("Enter your marks:\n");
+    scanf("%d", &total_marks);
+
+    if (total_marks >= 50)
+        goto pass;
+    else
+        goto fail;
+
+pass:
+    printf("Congratulations! You passed.\n");
+    return 0;
+
+fail:
+    printf("Better luck next time.\n");
+    return 0;
+}
+out put:Enter your marks:
+40
+Better luck next time.
