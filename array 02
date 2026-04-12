@@ -1,0 +1,40 @@
+program to calculate sum and average of an array 
+
+#include <stdio.h>
+#define MAXSIZE 10
+
+int main()
+{
+    int array[MAXSIZE], i, n;
+    int positive_sum = 0, negative_sum = 0, total = 0, count = 0;
+    float average;
+
+    printf("Enter the value of n:\n");
+    scanf("%d", &n);
+
+    printf("Enter %d numbers:\n", n);
+    for(i = 0; i < n; i++)
+    {
+        scanf("%d", &array[i]);
+    }
+
+    for(i = 0; i < n; i++)
+    {
+        if(array[i] < 0)
+            negative_sum += array[i];
+        else if(array[i] > 0)
+            positive_sum += array[i];
+        else
+            count++;
+    }
+
+    total = positive_sum + negative_sum;
+    average = (float) total / n;
+
+    printf("Sum of positive numbers = %d\n", positive_sum);
+    printf("Sum of negative numbers = %d\n", negative_sum);
+    printf("Total sum = %d\n", total);
+    printf("Average = %.2f\n", average);
+
+    return 0;
+}
