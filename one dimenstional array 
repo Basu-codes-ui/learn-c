@@ -1,0 +1,44 @@
+write a program to find sum of two one dimenstional array 
+
+#include <stdio.h>
+
+int main()
+{
+    int a[10], b[10], sum[10];
+    int i, num;
+
+    printf("Enter the size of array:\n");
+    scanf("%d", &num);
+
+    printf("Enter elements of array A:\n");
+    for(i = 0; i < num; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+
+    printf("Enter elements of array B:\n");
+    for(i = 0; i < num; i++)
+    {
+        scanf("%d", &b[i]);
+    }
+
+    // Calculating sum
+    for(i = 0; i < num; i++)
+    {
+        sum[i] = a[i] + b[i];
+    }
+
+    // Display result
+    printf("Sum of arrays:\n");
+    for(i = 0; i < num; i++)
+    {
+        printf("%d ", sum[i]);
+    }
+
+    return 0;
+}
+num = 3
+A = 1 2 3
+B = 4 5 6
+
+5 7 9
