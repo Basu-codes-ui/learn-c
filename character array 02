@@ -1,0 +1,29 @@
+Correct Program (Clean & Perfect)
+#include <stdio.h>
+
+int main() {
+    char country[20] = "United Kingdom";
+
+    printf("\n");
+
+    printf("*123456789012345*\n");
+    printf("-----------------\n");
+
+    printf("|%15s|\n", country);   // Right aligned
+    printf("|%-15s|\n", country);  // Left aligned
+    printf("|%.5s|\n", country);   // First 5 characters
+    printf("|%15.5s|\n", country); // Right align + limit
+    printf("|%-15.5s|\n", country);// Left align + limit
+
+    printf("-----------------\n");
+
+    return 0;
+}
+ out put:*123456789012345*
+-----------------
+|United Kingdom|
+|United Kingdom|
+|Unite|
+|          Unite|
+|Unite          |
+-----------------
