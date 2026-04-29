@@ -1,0 +1,38 @@
+function is a set of instructions which carryout a particular task 
+example program:
+#include <stdio.h>
+
+// Function declaration (prototype)
+void printline(void);
+
+int main()
+{
+    int x, y;
+
+    printline();  // calling function
+
+    printf("Enter 2 numbers:\n");
+    scanf("%d %d", &x, &y);
+
+    printline();  // calling function again
+
+    printf("x = %d and y = %d\n", x, y);
+
+    printline();
+
+    return 0;
+}
+out put: enter two numbers 
+2  3
+x=2
+y=3
+// Function definition
+void printline(void)
+{
+    int i;
+    for (i = 1; i <= 50; i++)
+    {
+        printf("-");
+    }
+    printf("\n");
+}
