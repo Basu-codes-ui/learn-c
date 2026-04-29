@@ -1,0 +1,27 @@
+add two numbers using function 
+#include <stdio.h>
+
+int addnum(int x, int y);   // function prototype
+
+int main()
+{
+    int a, b, sum;
+
+    printf("Enter two numbers:\n");
+    scanf("%d %d", &a, &b);
+
+    sum = addnum(a, b);
+
+    printf("Sum = %d\n", sum);
+
+    return 0;
+}
+
+int addnum(int x, int y)
+{
+    int ans;
+    ans = x + y;
+    return ans;
+}
+out put:x=10,y=5
+(x+y)=10+5=15
