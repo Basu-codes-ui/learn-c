@@ -76,3 +76,93 @@ float largest(float a[], int n)
 - Loop (for loop)
 - Conditional statements (if)
 - Floating point numbers
+
+functiones 04 
+## 🔷 Program: Sorting an Array Using Function (Bubble Sort)
+
+### 📌 Description
+This program sorts an array of integers in **ascending order** using a function.  
+It uses the **Bubble Sort algorithm** to compare and swap adjacent elements.
+
+---
+
+### 💻 Program
+```c
+#include <stdio.h>
+
+void sort(int n, int x[]);
+
+main()
+{
+    int i;
+    int marks[5] = {40, 90, 73, 81, 85};
+
+    printf("marks before sorting\n");
+    for(i = 0; i < 5; i++)
+        printf("%d ", marks[i]);
+
+    printf("\n\n");
+
+    sort(5, marks);   // function call
+
+    printf("marks after sorting\n");
+    for(i = 0; i < 5; i++)
+        printf("%4d", marks[i]);
+
+    printf("\n");
+}
+
+void sort(int n, int x[])
+{
+    int i, j, t;
+
+    for(i = 1; i <= n - 1; i++)
+    {
+        for(j = 1; j <= n - i; j++)
+        {
+            if(x[j - 1] > x[j])
+            {
+                t = x[j - 1];
+                x[j - 1] = x[j];
+                x[j] = t;
+            }
+        }
+    }
+}
+```
+
+---
+
+### 📊 Sample Output
+```
+marks before sorting
+40 90 73 81 85
+
+marks after sorting
+  40  73  81  85  90
+```
+
+---
+
+### 🧠 Concepts Used
+- Functions
+- Arrays
+- Bubble Sort Algorithm
+- Nested loops
+- Conditional statements (if)
+- Swapping technique
+
+---
+
+### ⚙️ Algorithm (Steps)
+1. Start from the first element of the array  
+2. Compare adjacent elements  
+3. Swap if they are in wrong order  
+4. Repeat for all elements  
+5. Continue passes until array is sorted  
+
+---
+
+### 👨‍💻 Author
+Basavaraj S  
+Electronics & Communication Engineering Student
