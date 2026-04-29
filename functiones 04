@@ -1,0 +1,42 @@
+write a program that uses functions to sort an array of Integers 
+#include <stdio.h>
+
+void sort(int n, int x[]);
+
+main()
+{
+    int i;
+    int marks[5] = {40, 90, 73, 81, 85};
+
+    printf("marks before sorting\n");
+    for(i = 0; i < 5; i++)
+        printf("%d ", marks[i]);
+
+    printf("\n\n");
+
+    sort(5, marks);   // function call
+
+    printf("marks after sorting\n");
+    for(i = 0; i < 5; i++)
+        printf("%4d", marks[i]);
+
+    printf("\n");
+}
+
+void sort(int n, int x[])
+{
+    int i, j, t;
+
+    for(i = 1; i <= n - 1; i++)
+    {
+        for(j = 1; j <= n - i; j++)
+        {
+            if(x[j - 1] > x[j])
+            {
+                t = x[j - 1];
+                x[j - 1] = x[j];
+                x[j] = t;
+            }
+        }
+    }
+}
