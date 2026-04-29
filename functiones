@@ -22,10 +22,7 @@ int main()
 
     return 0;
 }
-out put: enter two numbers 
-2  3
-x=2
-y=3
+
 // Function definition
 void printline(void)
 {
@@ -36,3 +33,7 @@ void printline(void)
     }
     printf("\n");
 }
+out put: enter two numbers 
+2  3
+x=2
+y=3
