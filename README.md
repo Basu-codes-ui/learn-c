@@ -166,3 +166,98 @@ marks after sorting
 ### 👨‍💻 Author
 Basavaraj S  
 Electronics & Communication Engineering Student
+
+5) Function-5
+Even or Odd Using Function in C
+
+📌 Description
+
+This program checks whether a given number is even or odd using a function in C.
+
+---
+
+🧠 Concept Used
+
+- Functions in C
+- Modulus operator ("%")
+- Conditional statements ("if-else")
+
+---
+
+⚙️ How It Works
+
+1. User enters a number.
+2. The number is passed to a function.
+3. The function uses:
+   n % 2
+   - If result = "0" → Even
+   - If result = "1" → Odd
+4. The result is returned to "main()" and printed.
+
+---
+
+💻 Code
+
+#include <stdio.h>
+
+// function declaration
+int checkEvenOdd(int n);
+
+int main()
+{
+    int num;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (checkEvenOdd(num) == 0)
+        printf("Even number");
+    else
+        printf("Odd number");
+
+    return 0;
+}
+
+// function definition
+int checkEvenOdd(int n)
+{
+    return n % 2;
+}
+
+---
+
+▶️ Sample Input / Output
+
+Input:
+
+Enter a number: 6
+
+Output:
+
+Even number
+
+Input:
+
+Enter a number: 5
+
+Output:
+
+Odd number
+
+---
+
+📚 Key Learning
+
+- "%" operator gives remainder
+- Functions help in code reuse
+- Clear separation of logic (main vs function)
+
+---
+
+🚀 Future Improvements
+
+- Take multiple numbers as input
+- Print result inside function
+- Extend for positive/negative checks
+
+---
