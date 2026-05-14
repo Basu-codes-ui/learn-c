@@ -1,4 +1,4 @@
-write program that uses a function to sort an array of Integers 
+8write program that uses a function to sort an array of Integers 
 #include <stdio.h>
 
 void sort(int m, int x[]);
@@ -42,3 +42,9 @@ void sort(int m, int x[])
         }
     }
 }
+out put:
+Marks before sorting
+  40  90  78  81  85
+
+Marks after sorting
+  40  78  81  85  90
