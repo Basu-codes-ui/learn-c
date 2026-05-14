@@ -313,3 +313,31 @@ Subject-3 = 218
 Grand Total = 562
 Conclusion
 The program successfully demonstrates the use of structures and arrays in C to manage student marks and calculate totals efficiently.
+
+structure 04 case study on book study 
+Book Shop Inventory Management System in C
+Aim
+To write a C program using structures and functions to maintain the inventory of books in a book shop.
+Program Description
+This program stores and manages details of books available in a book shop.
+The user enters:
+Book title
+Author name
+Number of copies required
+The program:
+Searches for the book
+Displays book details if available
+Checks stock quantity
+Calculates total cost
+Displays appropriate messages if:
+Book is not found
+Required copies are not available
+Concepts Used
+Structures
+Nested structures
+Arrays of structures
+Functions
+String handling
+strcmp()
+atoi()
+User-defined functions
