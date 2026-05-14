@@ -261,3 +261,55 @@ Odd number
 - Extend for positive/negative checks
 
 ---
+
+structure 01
+Student Marks Management Using Structures in C
+Aim
+To write a C program using structures and arrays to store marks of three students, calculate:
+Student total marks
+Subject total marks
+Grand total
+Program Description
+This program uses:
+Structure
+Array inside structure
+Nested loops
+Each student has:
+Marks of 3 subjects
+Total marks
+The program:
+Stores marks of 3 students
+Calculates each student's total
+Calculates subject-wise totals
+Calculates grand total
+Displays all results
+Structure Used
+C
+struct marks
+{
+    int sub[3];
+    int total;
+};
+sub[3] stores marks of 3 subjects
+total stores total marks of a student
+Concepts Used
+Structures
+Arrays
+Nested for loops
+Structure arrays
+Arithmetic operations
+Output Example
+Plain text
+STUDENT TOTAL
+Student-1 = 193
+Student-2 = 179
+Student-3 = 190
+
+SUBJECT TOTAL
+Subject-1 = 134
+Subject-2 = 210
+Subject-3 = 218
+
+Grand Total = 562
+Conclusion
+The program successfully demonstrates the use of structures and arrays in C to manage student marks and calculate totals efficiently.
