@@ -1,0 +1,46 @@
+write a function using pointer to exchange the values stored in two location in the memory 
+#include <stdio.h>
+
+void exchange(int *a, int *b);
+
+int main()
+{
+    int x, y;
+
+    x = 100;
+    y = 200;
+
+    printf("Before exchange: x = %d  y = %d\n", x, y);
+
+    exchange(&x, &y);   /* function call */
+
+    printf("After exchange: x = %d  y = %d\n", x, y);
+
+    return 0;
+}
+
+void exchange(int *a, int *b)
+{
+    int t;
+
+    t = *a;     /* store value of a */
+    *a = *b;    /* put b into a */
+    *b = t;     /* put t into b */
+}
+Explanation:
+&x and &y → addresses of variables are passed
+int *a, *b → pointer parameters receive addresses
+*a → value stored at address a
+*b → value stored at address b
+Swapping process:
+Plain text
+x = 100
+y = 200
+
+t = *a = 100
+*a = *b = 200
+*b = t = 100
+Output:
+Plain text
+Before exchange: x = 100  y = 200
+After exchange: x = 200  y = 100
