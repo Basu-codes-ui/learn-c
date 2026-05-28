@@ -1,0 +1,46 @@
+write a program using pointer to determine the length of a character string 
+#include <stdio.h>
+
+void main()
+{
+    char name[] = "DELHI";
+
+    int length;
+
+    char *cptr = name;
+
+    printf("%s\n", name);
+
+    while (*cptr != '\0')
+    {
+        printf("%c is stored at address %u\n", *cptr, cptr);
+
+        cptr++;
+    }
+
+    length = cptr - name;
+
+    printf("\nLength of string = %d\n", length);
+}
+
+D   E   L   H   I   \0
+↑
+cptr
+
+cptr → D
+cptr → E
+cptr → L
+cptr → H
+cptr → I
+cptr → \0   stop
+
+
+out put:
+DELHI
+D is stored at address ....
+E is stored at address ....
+L is stored at address ....
+H is stored at address ....
+I is stored at address ....
+
+Length of string = 5
