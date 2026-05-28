@@ -1,0 +1,25 @@
+write example where an pointer points to the address of another pointer 
+#include <stdio.h>
+
+int main()
+{
+    int number = 50;
+
+    int *p;
+    int **p2;
+
+    p = &number;
+    p2 = &p;
+
+    printf("Address of number = %x\n", &number);
+
+    printf("Address stored in p = %x\n", p);
+
+    printf("Value of *p = %d\n", *p);
+
+    printf("Address stored in p2 = %x\n", p2);
+
+    printf("Value of **p2 = %d\n", **p2);
+
+    return 0;
+}
