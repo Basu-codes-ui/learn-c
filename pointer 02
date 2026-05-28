@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+void main()
+{
+    int a[6] = {100, 200, 300, 400, 500, 600};
+
+    int *p;
+
+    p = a;
+
+    printf("Base address of array = %p\n", p);
+
+    printf("Value at first position = %d\n", *p);
+
+    printf("Second element = %d\n", *(p + 1));
+
+    printf("Third element = %d\n", *(p + 2));
+
+    printf("Fourth element = %d\n", *(p + 3));
+
+    printf("Fifth element = %d\n", *(p + 4));
+
+    printf("Sixth element = %d\n", *(p + 5));
+}
+
+Explanation:
+a[6] → array of 6 elements
+p = a → pointer stores base address of array
+*p → first element
+*(p + 1) → second element
+*(p + 2) → third element
+
+a[i] = *(a + i)
+
+Since p = a,
+
+a[i] = *(p + i)
+
+a[0] = *(p + 0) = 100
+a[1] = *(p + 1) = 200
+a[2] = *(p + 2) = 300
