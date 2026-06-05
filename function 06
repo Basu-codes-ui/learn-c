@@ -1,0 +1,26 @@
+
+The image appears to contain a C program that finds the larger of two numbers using pointers and returns the address of the larger value.
+
+#include <stdio.h>
+int *larger(int *x, int *y);
+
+int main()
+{
+    int a = 100;
+    int b = 20;
+    int *p;
+
+    p = larger(&a, &b);
+
+    printf("%d", *p);
+
+    return 0;
+}
+
+int *larger(int *x, int *y)
+{
+    if (*x > *y)
+        return x;
+    else
+        return y;
+}
