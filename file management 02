@@ -1,0 +1,26 @@
+This program reads numbers from a file named DATA and separates them into two files
+#include <stdio.h>
+
+int main()
+{
+    FILE *f1, *f2, *f3;
+    int number;
+
+    f1 = fopen("DATA", "r");
+    f2 = fopen("ODD", "w");
+    f3 = fopen("EVEN", "w");
+
+    while (fscanf(f1, "%d", &number) != EOF)
+    {
+        if (number % 2 == 0)
+            fprintf(f3, "%d ", number);
+        else
+            fprintf(f2, "%d ", number);
+    }
+
+    fclose(f1);
+    fclose(f2);
+    fclose(f3);
+
+    return 0;
+}
