@@ -1,0 +1,50 @@
+write a program to illustrate error handling in life operations 
+#include <stdio.h>
+
+main()
+{
+    char filename[20];
+    FILE *fp1, *fp2;
+    int i, number;
+
+    fp1 = fopen("TEST", "w");
+
+    for(i = 10; i <= 100; i += 10)
+        putw(i, fp1);
+
+    fclose(fp1);
+
+    printf("\nInput filename\n");
+
+open_file:
+
+    scanf("%s", filename);
+
+    if((fp2 = fopen(filename, "r")) == NULL)
+    {
+        printf("Cannot open the file.\n");
+        printf("Type a filename again.\n");
+        goto open_file;
+    }
+    else
+    {
+        for(i = 1; i <= 10; i++)
+        {
+            number = getw(fp2);
+            printf("%d\n", number);
+        }
+    }
+
+    fclose(fp2);
+}
+out put:
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
