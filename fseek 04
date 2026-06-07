@@ -1,0 +1,33 @@
+Copy Contents of One File to Another Using fseek()
+#include <stdio.h>
+
+int main()
+{
+    FILE *fp1, *fp2;
+    char ch;
+
+    fp1 = fopen("source.txt", "r");
+    fp2 = fopen("target.txt", "w");
+
+    if(fp1 == NULL || fp2 == NULL)
+    {
+        printf("File cannot be opened");
+        return 1;
+    }
+
+    fseek(fp1, 0, SEEK_SET);
+
+    while((ch = getc(fp1)) != EOF)
+    {
+        putc(ch, fp2);
+    }
+
+    printf("File copied successfully\n");
+
+    fclose(fp1);
+    fclose(fp2);
+
+    return 0;
+}
+output:File copied successfully
+Welcome to C Programming
