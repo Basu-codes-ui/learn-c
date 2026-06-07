@@ -1,0 +1,52 @@
+write a program that will receive a file name and a line of as command line arguments and write the text to the file 
+
+#include <stdio.h>
+
+main(int argc, char *argv[])
+{
+    FILE *fp;
+    int i;
+    char word[15];
+
+    fp = fopen(argv[1], "w");   /* open file with name argv[1] */
+
+    printf("\nNo. of arguments in command line = %d\n\n", argc);
+
+    for(i = 2; i < argc; i++)
+        fprintf(fp, "%s ", argv[i]);
+
+    fclose(fp);
+
+    /* Writing contents of the file to screen */
+
+    printf("Contents of the file %s\n\n", argv[1]);
+
+    fp = fopen(argv[1], "r");
+
+    for(i = 2; i < argc; i++)
+    {
+        fscanf(fp, "%s", word);
+        printf("%s ", word);
+    }
+
+    fclose(fp);
+
+    printf("\n\n");
+
+    /* Writing the arguments from memory */
+
+    for(i = 0; i < argc; i++)
+        printf("%d : %s\n", i, argv[i]);
+}
+output:No. of arguments in command line = 6
+
+Contents of the file data.txt
+
+Hello World C Programming
+
+0 : prog
+1 : data.txt
+2 : Hello
+3 : World
+4 : C
+5 : Programming
