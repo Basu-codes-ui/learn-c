@@ -1,0 +1,126 @@
+write a program to append additional items to the inventory created in example and print the total content of the file 
+#include <stdio.h>
+
+struct invent_record
+{
+    char name[20];
+    int number;
+    float price;
+    int quantity;
+};
+
+void append(struct invent_record *product, FILE *ptr);
+
+int main()
+{
+    struct invent_record item;
+    char filename[20];
+    int response;
+    FILE *fp;
+    long n;
+
+    printf("Enter filename : ");
+    scanf("%s", filename);
+
+    fp = fopen(filename, "a+");
+
+    if(fp == NULL)
+    {
+        printf("Cannot open file\n");
+        return 1;
+    }
+
+    do
+    {
+        append(&item, fp);
+
+        printf("\nItem %s appended.\n", item.name);
+
+        printf("Do you want to add another item?\n");
+        printf("Press 1 for YES, 0 for NO : ");
+        scanf("%d", &response);
+
+    } while(response == 1);
+
+    n = ftell(fp);
+
+    fclose(fp);
+
+    fp = fopen(filename, "r");
+
+    if(fp == NULL)
+    {
+        printf("Cannot open file\n");
+        return 1;
+    }
+
+    printf("\n\nContents of Inventory File\n");
+    printf("-----------------------------------------------\n");
+
+    while(ftell(fp) < n)
+    {
+        fscanf(fp, "%s %d %f %d",
+               item.name,
+               &item.number,
+               &item.price,
+               &item.quantity);
+
+        printf("%-15s %-5d %-8.2f %-5d\n",
+               item.name,
+               item.number,
+               item.price,
+               item.quantity);
+    }
+
+    fclose(fp);
+
+    return 0;
+}
+
+void append(struct invent_record *product, FILE *ptr)
+{
+    printf("\nItem name : ");
+    scanf("%s", product->name);
+
+    printf("Item number : ");
+    scanf("%d", &product->number);
+
+    printf("Item price : ");
+    scanf("%f", &product->price);
+
+    printf("Quantity : ");
+    scanf("%d", &product->quantity);
+
+    fprintf(ptr, "%s %d %.2f %d\n",
+            product->name,
+            product->number,
+            product->price,
+            product->quantity);
+}
+output:Enter filename : INVENTORY
+
+Item name : Pen
+Item number : 101
+Item price : 10
+Quantity : 50
+
+Item Pen appended.
+
+Do you want to add another item?
+Press 1 for YES, 0 for NO : 1
+
+Item name : Book
+Item number : 102
+Item price : 45
+Quantity : 20
+
+Item Book appended.
+
+Do you want to add another item?
+Press 1 for YES, 0 for NO : 0
+
+
+Contents of Inventory File
+-----------------------------------------------
+Pen             101   10.00    50
+Book            102   45.00    20
