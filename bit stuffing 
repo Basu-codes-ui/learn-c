@@ -1,0 +1,60 @@
+Write a program for a HLDC frame to perform the following:
+(i) Bit stuffing
+Aim:- Write a program to perform bit stuffing in C language and execute the same and 
+display the result.
+Theory: The new technique allows data frames to contain an arbitrary number if bits and 
+allows character codes with an arbitrary no of bits per character. Each frame begins 
+and ends with special bit pattern, 01111110, called a flag byte. Whenever the sender’s 
+data link layer encounters five consecutive ones in the data, it automatically stuffs a 0 bit 
+into the outgoing bit stream. This bit stuffing is analogous to character stuffing, in 
+which a DLE is stuffed into the outgoing character stream before DLE in the data
+Program: -
+// BIT Stuffing program.
+#include<stdio.h> 
+#include<string.h>
+void main()
+{
+int a[20],b[30],i,j,k,count,n; 
+printf("Enter Frame length :");
+//gets(n); 
+scanf("%d",&n);
+printf("Enter input frame (0's &Â 1's only): "); 
+for(i=0;i<n;i++)
+scanf("%d",&a[i]); 
+i=0;
+count=1; 
+j=0;
+while(i<n)
+{
+//count=0; 
+if(a[i]==1)
+{
+j++;
+b[j]=a[i];
+for(k=i+1;a[k]==1 && k<n && count<5;k++)
+{
+b[j]=a[k];
+count++; 
+if(count==5)
+{ 
+j++;
+b[j]=0;
+}
+i=k;
+}
+}
+else
+{
+b[j]=a[i];
+} 
+i++; 
+j++;
+count=1;
+}
+printf("After stuffing the frame is:"); 
+printf("01111110");
+for(i=0;i<j;i++) 
+printf("%d",b[i]); 
+printf("01111110");
+}
+Result: - The output is displayed on the screen after stuffing bits into the input.
